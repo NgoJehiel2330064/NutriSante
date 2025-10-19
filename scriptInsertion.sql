@@ -116,3 +116,4 @@ INSERT INTO Connexion (idUtilisateur, dateConnexion, reussie) VALUES
 (2, NOW(), 1),
 (3, NOW(), 0);
 
+select * from Connexion;
