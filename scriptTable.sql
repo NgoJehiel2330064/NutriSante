@@ -1,5 +1,5 @@
 -- ================================
--- 🧱 STRUCTURE DE BASE NUTRISANTÉ
+--  STRUCTURE DE BASE NUTRISANTÉ
 -- (Sans contraintes étrangères)
 -- ================================
 

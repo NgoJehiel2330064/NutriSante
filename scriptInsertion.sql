@@ -1,7 +1,7 @@
 USE nutrisante_db;
 
 -- =========================
--- 1️⃣ CATEGORIES
+-- 1️ CATEGORIES
 -- =========================
 INSERT INTO Categorie (nom, description) VALUES
 ('Vitamines', 'Produits pour renforcer le système immunitaire.'),
@@ -12,7 +12,7 @@ INSERT INTO Categorie (nom, description) VALUES
 ('Produits bio', 'Aliments et suppléments issus de l’agriculture biologique.');
 
 -- =========================
--- 2️⃣ PRODUITS
+-- 2️ PRODUITS
 -- =========================
 INSERT INTO Produit (idCategorie, nom, description, prixUnitaire, stock) VALUES
 (1, 'Vitamine C 1000mg', 'Renforce les défenses naturelles et réduit la fatigue.', 15.90, 120),
@@ -27,7 +27,7 @@ INSERT INTO Produit (idCategorie, nom, description, prixUnitaire, stock) VALUES
 (6, 'Spiruline Bio 500mg', 'Source naturelle de fer et d’antioxydants.', 16.40, 130);
 
 -- =========================
--- 3️⃣ IMAGES PRODUITS
+-- 3️ IMAGES PRODUITS
 -- =========================
 INSERT INTO ImageProduit (idProduit, url) VALUES
 (1, 'images/vitaminec.jpg'),
@@ -42,7 +42,7 @@ INSERT INTO ImageProduit (idProduit, url) VALUES
 (10, 'images/spiruline.jpg');
 
 -- =========================
--- 4️⃣ ADRESSES
+-- 4️ ADRESSES
 -- =========================
 INSERT INTO Adresse (pays, ville, codePostal) VALUES
 ('Canada', 'Montréal', 'H3A1B9'),
@@ -50,7 +50,7 @@ INSERT INTO Adresse (pays, ville, codePostal) VALUES
 ('France', 'Paris', '75001');
 
 -- =========================
--- 5️⃣ UTILISATEURS
+-- 5️ UTILISATEURS
 -- =========================
 INSERT INTO Utilisateur (idAdresse, nom, prenom, email, dateInscription, sel, motDePasseHache, isAdmin, telephone) VALUES
 (1, 'Admin', 'NutriSanté', 'admin@nutrisante.com', NOW(), 'A', 'admin123', 1, 0000000000),
@@ -58,12 +58,12 @@ INSERT INTO Utilisateur (idAdresse, nom, prenom, email, dateInscription, sel, mo
 (3, 'Dupont', 'Marie', 'marie.dupont@email.com', NOW(), 'C', 'marie123', 0, 987654321);
 
 -- =========================
--- 6️⃣ PANIERS
+-- 6️ PANIERS
 -- =========================
 INSERT INTO Panier (idUtilisateur) VALUES (2), (3);
 
 -- =========================
--- 7️⃣ DETAILS DU PANIER
+-- 7️ DETAILS DU PANIER
 -- =========================
 INSERT INTO PanierDetail (idPanier, idProduit, quantite, prixUnitaire) VALUES
 (1, 1, 2, 15.90),
@@ -71,14 +71,14 @@ INSERT INTO PanierDetail (idPanier, idProduit, quantite, prixUnitaire) VALUES
 (2, 6, 2, 18.75);
 
 -- =========================
--- 8️⃣ COMMANDES
+-- 8️ COMMANDES
 -- =========================
 INSERT INTO Commande (idUtilisateur, dateCommande) VALUES
 (2, NOW()),
 (3, NOW());
 
 -- =========================
--- 9️⃣ DETAILS DES COMMANDES
+-- 9️ DETAILS DES COMMANDES
 -- =========================
 INSERT INTO CommandeDetail (idCommande, idProduit, quantite) VALUES
 (1, 1, 2),
@@ -86,7 +86,7 @@ INSERT INTO CommandeDetail (idCommande, idProduit, quantite) VALUES
 (2, 6, 2);
 
 -- =========================
--- 🔟 STOCK MOUVEMENTS
+--  STOCK MOUVEMENTS
 -- =========================
 INSERT INTO StockMouvement (idProduit, typeMouvement, quantite, dateMouvement, motif) VALUES
 (1, 1, 200, NOW(), 'Stock initial'),
@@ -101,7 +101,7 @@ INSERT INTO StockMouvement (idProduit, typeMouvement, quantite, dateMouvement, m
 (10, 1, 130, NOW(), 'Stock initial');
 
 -- =========================
--- 1️⃣1️⃣ AVIS PRODUITS
+--  AVIS PRODUITS
 -- =========================
 INSERT INTO AvisProduit (idUtilisateur, idProduit, note, commentaire, dateAvis) VALUES
 (2, 1, 5, 'Excellent produit, efficace dès la première semaine.', NOW()),
@@ -109,10 +109,9 @@ INSERT INTO AvisProduit (idUtilisateur, idProduit, note, commentaire, dateAvis) 
 (2, 8, 5, 'L’odeur de lavande est parfaite pour se détendre.', NOW());
 
 -- =========================
--- 1️⃣2️⃣ CONNEXIONS
+--  CONNEXIONS
 -- =========================
 INSERT INTO Connexion (idUtilisateur, dateConnexion, reussie) VALUES
 (1, NOW(), 1),
 (2, NOW(), 1),
 (3, NOW(), 0);
-

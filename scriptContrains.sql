@@ -1,5 +1,5 @@
 -- ===========================================
--- 🔗 CONTRAINTES DE CLÉS ÉTRANGÈRES NUTRISANTÉ
+--  CONTRAINTES DE CLÉS ÉTRANGÈRES NUTRISANTÉ
 -- ===========================================
 
 USE nutrisante_db;
