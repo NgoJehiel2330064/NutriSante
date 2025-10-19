@@ -108,6 +108,7 @@ INSERT INTO AvisProduit (idUtilisateur, idProduit, note, commentaire, dateAvis) 
 (3, 4, 4, 'Bonne texture, hydrate bien la peau.', NOW()),
 (2, 8, 5, 'L’odeur de lavande est parfaite pour se détendre.', NOW());
 
+
 -- =========================
 --  CONNEXIONS
 -- =========================
